@@ -77,7 +77,7 @@ def parse_args(input_args=None):
     parser.add_argument(
         "--instance_prompt",
         type=str,
-        default=None,
+        default=os.environ['SAMPLE_PROMPT'],
         help="The prompt with identifier specifying the instance",
     )
     parser.add_argument(
@@ -89,7 +89,7 @@ def parse_args(input_args=None):
     parser.add_argument(
         "--save_sample_prompt",
         type=str,
-        default=None,
+        default=os.environ['SAMPLE_PROMPT'],
         help="The prompt used to generate sample outputs to save.",
     )
     parser.add_argument(
